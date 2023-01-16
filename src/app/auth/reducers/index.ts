@@ -20,6 +20,3 @@ export const authReducer = createReducer(
     }
   })
 );
-
-const courses = [];
-courses.reduce()
