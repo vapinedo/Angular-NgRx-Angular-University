@@ -9,6 +9,7 @@ import { LoginComponent } from "./login/login.component";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
 import { ModuleWithProviders, NgModule } from "@angular/core";
+import { AuthGuard } from "./auth.guard";
 
 @NgModule({
   imports: [
@@ -27,7 +28,7 @@ export class AuthModule {
   static forRoot(): ModuleWithProviders<AuthModule> {
     return {
       ngModule: AuthModule,
-      providers: [AuthService],
+      providers: [AuthService, AuthGuard],
     };
   }
 }
